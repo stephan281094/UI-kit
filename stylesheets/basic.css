@@ -1,0 +1,55 @@
+/* Buttons */
+.button {
+    float: left;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    transition: border .25s linear, color .25s linear, background-color .25s linear;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.fluid.button {
+    width: 100%;
+}
+
+.button:hover, .button:focus {
+    color: #fff;
+    outline: 0;
+}
+
+.button:active, .button.active {
+    outline: 0;
+    box-shadow: none;
+}
+
+.button.disabled, .button[disabled], fieldset[disabled] .button {
+    color: rgba(0, 0, 0, .75);
+    background-color: #bdc3c7;
+    opacity: .7;
+}
+
+.primary.button        { background-color: #1abc9c; }
+.primary.button:hover  { background-color: #1dd2af; }
+.info.button           { background-color: #3498db; }
+.info.button:hover     { background-color: #4aa3df; }
+.danger.button         { background-color: #c0392b; }
+.danger.button:hover   { background-color: #d14233; }
+.success.button        { background-color: #2ecc71; }
+.success.button:hover  { background-color: #40d47e; }
+.warning.button        { background-color: #f1c40f; }
+.warning.button:hover  { background-color: #f2ca27; }
+.inverse.button        { background-color: #34495e; }
+.inverse.button:hover  { background-color: #3d566e; }
+.default.button        { background-color: #95a5a6; }
+.default.button:hover  { background-color: #a3b1b2; }
