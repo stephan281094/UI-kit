@@ -24,6 +24,10 @@ section {
     padding: 20px 8% 0px;
 }
 
+section:first-of-type {
+    padding: 0 8%;
+}
+
 section:after {
     content: "";
     clear: both;
@@ -33,23 +37,29 @@ section:after {
 section#hero {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 275px;
     color: #fff;
     text-align: center;
-    background: url(../resources/cover.svg) bottom center;
+    background: #1abc9c;
     display: table;
+}
+
+section#hero h1 {
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    display: inline-block;
 }
 
 section#hero small {
     font-size: 14pt;
 }
 
-section#buttons .button {
+section#buttons .button, section#input .field {
     margin: 10px .5%;
     width: 24%;
 }
 
 .vertically-centered {
     vertical-align: middle;
+    width: 100%;
     display: table-cell;
 }

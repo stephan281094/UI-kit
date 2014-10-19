@@ -1,4 +1,5 @@
-/* Buttons */
+/* Buttons
+------------------------------------------------------------------------------------------------- */
 .button {
     float: left;
     padding: 10px 15px;
@@ -10,7 +11,7 @@
     border: none;
     border-radius: 4px;
     text-decoration: none;
-    color: #fff;
+    color: rgba(0, 0, 0, .75);
     transition: border .25s linear, color .25s linear, background-color .25s linear;
     -webkit-font-smoothing: subpixel-antialiased;
 
@@ -19,37 +20,93 @@
     user-select: none;
 }
 
+.small.button {
+    padding: 2px 3px;
+    font-size: 7pt;
+}
+
 .fluid.button {
     width: 100%;
 }
 
 .button:hover, .button:focus {
-    color: #fff;
     outline: 0;
 }
 
-.button:active, .button.active {
+.button:not(.disabled):active {
     outline: 0;
-    box-shadow: none;
 }
 
 .button.disabled, .button[disabled], fieldset[disabled] .button {
-    color: rgba(0, 0, 0, .75);
     background-color: #bdc3c7;
     opacity: .7;
 }
 
-.primary.button        { background-color: #1abc9c; }
-.primary.button:hover  { background-color: #1dd2af; }
-.info.button           { background-color: #3498db; }
-.info.button:hover     { background-color: #4aa3df; }
-.danger.button         { background-color: #c0392b; }
-.danger.button:hover   { background-color: #d14233; }
-.success.button        { background-color: #2ecc71; }
-.success.button:hover  { background-color: #40d47e; }
-.warning.button        { background-color: #f1c40f; }
-.warning.button:hover  { background-color: #f2ca27; }
-.inverse.button        { background-color: #34495e; }
-.inverse.button:hover  { background-color: #3d566e; }
-.default.button        { background-color: #95a5a6; }
-.default.button:hover  { background-color: #a3b1b2; }
+/* Inspired by http://flatuicolors.com */
+.primary.button            { background-color: #1abc9c; color: #fff; }
+.primary.button:hover      { background-color: #1dd2af; }
+.primary.button:active     { background-color: #08aa8a; }
+.info.button               { background-color: #3498db; color: #fff; }
+.info.button:hover         { background-color: #4aa3df; }
+.info.button:active        { background-color: #2286c9; }
+.danger.button             { background-color: #c0392b; color: #fff; }
+.danger.button:hover       { background-color: #d14233; }
+.danger.button:active      { background-color: #a82719; }
+.success.button            { background-color: #2ecc71; color: #fff; }
+.success.button:hover      { background-color: #40d47e; }
+.success.button:active     { background-color: #1cba59; }
+.warning.button            { background-color: #f1c40f; color: #fff; }
+.warning.button:hover      { background-color: #f2ca27; }
+.warning.button:active     { background-color: #d9b200; }
+.inverse.button            { background-color: #34495e; color: #fff; }
+.inverse.button:hover      { background-color: #3d566e; }
+.inverse.button:active     { background-color: #22374c; }
+.default.button            { background-color: #95a5a6; color: #fff; }
+.default.button:hover      { background-color: #a3b1b2; }
+.default.button:active     { background-color: #839394; }
+
+
+
+/* Input
+------------------------------------------------------------------------------------------------- */
+.field {
+    position: relative;
+    float: left;
+}
+
+.field input:not([type=submit]):not([type=file]) {
+    position: relative;
+    padding: 10px 15px;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.467;
+    color: #34495e;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 2px #bdc3c7;
+    outline: none !important;
+    border: 0;
+    text-align: left;
+    transition: box-shadow .25s linear, color .25s linear, background-color .25s linear
+}
+
+.field input:not([type=submit]):not([type=file]).fluid {
+    width: 100%;
+}
+
+.field input:not([type=submit]):not([type=file]).error {
+    box-shadow: inset 0 0 0 2px #c0392b !important;
+}
+
+.field input:not([type=submit]):not([type=file]).success {
+    box-shadow: inset 0 0 0 2px #2ecc71 !important;
+}
+
+.field input:not([type=submit]):not([type=file])[disabled] {
+    box-shadow: inset 0 0 0 2px #dde3e7 !important;
+    background-color: #edf3f7;
+    opacity: .7;
+}
+
+.field input:not([type=submit]):not([type=file]):focus {
+    box-shadow: inset 0 0 0 2px #1abc9c;
+}

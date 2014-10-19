@@ -3,33 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>UI-kit</title>
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="stylesheets/main.css">
     <link rel="stylesheet" href="stylesheets/basic.css">
     <link rel="stylesheet" href="stylesheets/typography.css">
     <link rel="stylesheet" href="stylesheets/custom.css">
 </head>
 <body>
+    <div id="debug-toggle">
+        <a href="javascript:void(0);" class="small button">CSS debugging OFF</a><br>
+        <label for="colours">show colors</label>
+        <input id="colours" type="checkbox">
+    </div>
+    <div class="debug">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+
     <section id="hero">
-        <div class="vertically-centered">
-            <h1>UI Elements</h1>
+        <div class="animated fadeInDown vertically-centered">
+            <h1>UI Elements</h1><br>
             <small>User Interface Kit based on Flat UI</small>
         </div>
     </section>
     <section id="buttons">
         <h3>Buttons</h3>
-        <a href="#" class="fluid primary button">Primary Button</a>
-        <a href="#" class="fluid warning button">Warning Button</a>
-        <a href="#" class="fluid default button">Default Button</a>
-        <a href="#" class="fluid danger button">Danger Button</a>
-        <a href="#" class="fluid success button">Success Button</a>
-        <a href="#" class="fluid inverse button">Inverse Button</a>
-        <a href="#" class="fluid info button">Info Button</a>
-        <a href="#" class="fluid disabled button">Disabled Button</a>
+        <a class="primary button">Primary Button</a>
+        <a class="warning button">Warning Button</a>
+        <a class="default button">Default Button</a>
+        <a class="danger button">Danger Button</a>
+        <a class="inverse button">Inverse Button</a>
+        <a class="success button">Success Button</a>
+        <a class="info button">Info Button</a>
+        <a class="disabled button">Disabled Button</a>
     </section>
     <section id="input">
         <h3>Input</h3>
+        <div class="field">
+            <label for="email">Your Email Address</label>
+            <input class="fluid" id="email" type="text" placeholder="example@blueglimpse.com">
+        </div>
+        <div class="field">
+            <label for="username">Your Username</label>
+            <input class="fluid error" id="username" type="text" placeholder="JohnDoe">
+        </div>
+        <div class="field">
+            <label for="password">Your password</label>
+            <input class="fluid success" id="password" type="password" placeholder="Secret12345">
+        </div>
+        <div class="field">
+            <label for="phone">Your phone number</label>
+            <input class="fluid" id="phone" type="tel" placeholder="+31(0) 612345678" disabled>
+        </div>
     </section>
 
-    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- Development tools -->
+    <script src="javascripts/debug.js"></script>
 </body>
 </html>
