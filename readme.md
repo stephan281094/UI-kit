@@ -5,10 +5,10 @@ This project is a Flat design UI kit 'framework'. It contains lots of components
 
 ## Installation
 
-* Install bower: `npm install --global bower` if you haven't already.
-* Install bower components: `bower install`.
-* Install node modules: `npm install`.
-* Run gulp: `gulp` and let the magic happen.
+Make sure you have installed bower
+* Install bower: `npm install --global bower`.
+* Run `npm install`
+* Run `gulp` and let the magic happen.
 
 
 ## Contributors
