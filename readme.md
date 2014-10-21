@@ -1,15 +1,14 @@
 ## Synopsis
 
 This project is a Flat design UI kit 'framework'. It contains lots of components that just work. It uses Profound's Semantic Grid framework, normalise.css. The design is based on Flat UI.
-###### < Links wil be added later > 
-
-## Code Example
-
-Coming soon..
+###### < Links wil be added later >
 
 ## Installation
 
-After cloning this repository, make sure you have installed bower: `npm install --global bower`. Then simply run `bower install`.
+* Install bower: `npm install --global bower` if you haven't already.
+* Install bower components: `bower install`.
+* Install node modules: `npm install`.
+* Run gulp: `gulp` and let the magic happen.
 
 
 ## Contributors
