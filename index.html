@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>UI-kit</title>
-    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
-    <link rel="stylesheet" href="build/stylesheets/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- <link rel="stylesheet" href="libs/normalize.css/normalize.css">
+    <link rel="stylesheet" href="libs/animate.css/animate.min.css">
     <link rel="stylesheet" href="build/stylesheets/basic.css">
-    <link rel="stylesheet" href="build/stylesheets/typography.css">
     <link rel="stylesheet" href="build/stylesheets/custom.css">
+    <link rel="stylesheet" href="build/stylesheets/main.css">
+    <link rel="stylesheet" href="build/stylesheets/typography.css"> -->
+    <link rel="stylesheet" href="build/stylesheets/all.min.css">
+
+    <script src="libs/headjs/dist/1.0.0/head.min.js"></script>
 </head>
 <body>
-    <div id="debug-toggle">
-        <a href="javascript:void(0);" class="small button">CSS debugging OFF</a><br>
-        <label for="colours">show colors</label>
-        <input id="colours" type="checkbox">
-    </div>
-    <div class="debug">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-    </div>
-
     <section id="hero">
         <div class="animated fadeInDown vertically-centered">
             <h1>UI Elements</h1><br>
@@ -59,8 +51,5 @@
             <input class="fluid" id="phone" type="tel" placeholder="+31(0) 612345678" disabled>
         </div>
     </section>
-
-    <!-- Development tools -->
-    <script src="build/javascripts/debug.js"></script>
 </body>
 </html>
