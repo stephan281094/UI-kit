@@ -3,7 +3,6 @@
     "version": "0.0.1",
     "dependencies": {
         "animate.css": "3.2.0",
-        "normalize.css": "3.0.2",
-        "headjs": "1.0.3"
+        "normalize.css": "3.0.2"
     }
 }
