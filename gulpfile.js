@@ -5,6 +5,8 @@ var sass        = require('gulp-ruby-sass');
 var coffee      = require('gulp-coffee');
 var autoprefix  = require('gulp-autoprefixer');
 var concat      = require('gulp-concat');
+var minifycss   = require('gulp-minify-css');
+var minifyjs    = require('gulp-uglify');
 var webserver   = require('gulp-webserver');
 var runSequence = require('run-sequence');
 
@@ -50,6 +52,7 @@ gulp.task('coffee', function() {
 gulp.task('concat_css', function(){
     return gulp.src([paths.libs.css.animate, paths.libs.css.normalize, paths.css])
         .pipe(concat('all.min.css'))
+        .pipe(minifycss({keepBreaks:true}))
         .pipe(gulp.dest('./build/css/'));
 });
 
@@ -57,6 +60,7 @@ gulp.task('concat_css', function(){
 gulp.task('concat_js', function(){
     return gulp.src(paths.js)
         .pipe(concat('all.min.js'))
+        .pipe(minifyjs())
         .pipe(gulp.dest('./build/js/'));
 });
 
