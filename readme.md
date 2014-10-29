@@ -1,4 +1,4 @@
-## Synopsis
+![A screenshot](http://i.imgur.com/WbgbmGx.png)
 
 This project is a Flat design UI kit 'framework'. It contains lots of components that just work. It uses [Profound's Semantic Grid System](http://www.profoundgrid.com), [Normalise.css](http://necolas.github.io/normalize.css/). The design is based on [Flat UI](http://designmodo.github.io/Flat-UI/).
 
