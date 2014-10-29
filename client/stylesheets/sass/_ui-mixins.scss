@@ -1,0 +1,12 @@
+@import 'grid';
+
+@mixin button($color) {
+	background-color: $color;
+
+	&:hover {
+		background-color: saturate($color, 20%)
+	}
+	&:active {
+		background-color: desaturate($color, 20%)
+	}
+}

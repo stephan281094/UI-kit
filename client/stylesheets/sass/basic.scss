@@ -1,0 +1,86 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+.button {
+    position: relative;
+    float: left;
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+    font-size: 11pt;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #444;
+    user-select: none;
+    transition: background-color .4s;
+    &.primary {
+        @include button($primary);
+    }
+    &.warning {
+        @include button($warning);
+    }
+    &.default {
+        @include button($default);
+    }
+    &.danger {
+        @include button($danger);
+    }
+    &.inverse {
+        @include button($inverse);
+    }
+    &.success {
+        @include button($success);
+    }
+    &.info {
+        @include button($info);
+    }
+    &.disabled, &[disabled] {
+        color: rgba(0, 0, 0, 0.75);
+        background-color: $disabled;
+        opacity: .7;
+    }
+}
+
+.field {
+    position: relative;
+    float: left;
+    margin: 5px;
+    label {
+        margin-left: 5px;
+        float: left;
+        color: #666;
+        font-size: 10pt;
+    }
+    input:not([type=submit]):not([type=file]) {
+        position: relative;
+        float: left;
+        clear: left;
+        padding: 10px;
+        padding-left: 5px;
+        min-width: 250px;
+        border: 0;
+        border-bottom: 3px solid #ddd;
+        outline: 0;
+        font-size: 12pt;
+
+        transition: color .4s;
+        &:focus {
+            color: #555 !important;
+            border-bottom-color: #555 !important;
+        }
+        &.danger {
+            color: $danger;
+            border-bottom-color: $danger;
+        }
+    }
+}
+
+@media (max-width: 678px) {
+    .field {
+        width: 100%;
+        
+        input:not([type=submit]):not([type=file]) {
+            width: 100%;
+        }
+    }
+}

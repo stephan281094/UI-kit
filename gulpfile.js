@@ -1,7 +1,7 @@
 var gulp        = require('gulp');
 var gutil       = require('gulp-util');
 var bower       = require('gulp-bower');
-var sass        = require('gulp-ruby-sass');
+var sass        = require('gulp-sass');
 var coffee      = require('gulp-coffee');
 var autoprefix  = require('gulp-autoprefixer');
 var concat      = require('gulp-concat');
@@ -10,8 +10,12 @@ var minifyjs    = require('gulp-uglify');
 var webserver   = require('gulp-webserver');
 var runSequence = require('run-sequence');
 
+var config = {
+    env: 'development'
+}
+
 var paths = {
-    sass: './client/stylesheets/sass/*.sass',
+    sass: './client/stylesheets/sass/*.scss',
     css: './client/stylesheets/css/*.css',
     coffee: './client/javascripts/coffee/*.coffee',
     js: './client/javascripts/js/*.js',
@@ -27,7 +31,8 @@ var paths = {
 }
 
 var webserver_config = {
-    open: true
+    open: true,
+    livereload: true
 }
 
 
@@ -37,7 +42,7 @@ gulp.task('bower', function(){
 
 gulp.task('sass', function(){
     return gulp.src(paths.sass)
-        .pipe(sass({ style: 'compact' }))
+        .pipe(sass({errLogToConsole: true}))
         .pipe(autoprefix('last 15 versions'))
         .pipe(gulp.dest('client/stylesheets/css/'));
 });
@@ -71,12 +76,11 @@ gulp.task('webserver', function() {
 
 
 gulp.task('default', function(){
-    runSequence(
-        'bower',
-        ['sass', 'coffee'],
-        ['concat_css', 'concat_js'],
-        'webserver'
-    );
+    if(config.env === 'development'){
+        runSequence('bower', ['sass', 'coffee'], 'webserver');
+    }else{
+        runSequence('bower', ['sass', 'coffee'], ['concat_css', 'concat_js'], 'webserver');
+    }
 
     gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.coffee, ['coffee']);
