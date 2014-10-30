@@ -75,10 +75,15 @@
     }
 }
 
+table thead {
+    border-bottom: 1px solid red !important;
+}
+
+
 @media (max-width: 678px) {
     .field {
         width: 100%;
-        
+
         input:not([type=submit]):not([type=file]) {
             width: 100%;
         }
